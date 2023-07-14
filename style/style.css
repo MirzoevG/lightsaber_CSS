@@ -1,0 +1,225 @@
+*,*::before,*::after{
+    padding: 0.1px;
+    margin: 0;
+}
+
+:root{
+    --box-color: rgb(209, 209, 209);
+}
+
+body{
+    background-color: rgb(0, 0, 0);
+}
+
+
+.panel{
+    width: 100%;
+    min-height: 100px;
+    background-color: rgb(39, 39, 39);
+    border-bottom: 1px solid grey;
+}
+
+.panel_description{
+    font-size: 22px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    color: rgb(179, 8, 246);
+}
+
+.colors_box{
+    width: 600px;
+    min-height: 100px;
+    margin: auto;
+}
+
+.color{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 1px solid grey;
+    display: inline-block;
+    margin-left: 90px;
+    margin-top: 15px;
+    box-shadow: 0px 0px 15px 3px rgb(17, 17, 17);
+    filter: blur(0.6px);
+    cursor: pointer;
+}
+
+.color_red{
+    background-color: rgb(255, 0, 0);
+}
+.color_blue{
+    background-color: rgb(0, 0, 255);
+}
+.color_green{
+    background-color: rgb(0, 255, 0);
+}
+
+main{
+    width: 100%;
+    min-height: 1600px;
+    background-color: rgb(39, 39, 39);
+}
+
+.wrapper-content{
+    width: 900px;
+    min-height: 1200px;
+    margin: 0 auto;
+    background-color: rgb(39, 39, 39);
+}
+
+.lightsaber{
+    width: 500px;
+    min-height: 900px;
+    margin: 0 auto;
+    transform: scale(0.6);
+}
+
+.lightsaber__part-1{
+    width: 75px;
+    height: 160px;
+    margin: 0 auto;
+    background: linear-gradient(to right, rgb(23, 23, 23) 50%, 
+                                          rgb(187, 187, 187), 
+                                          rgb(20, 20, 20));
+    border-radius: 8px 8px 6px 6px;
+    z-index: 2;
+    margin-top: -1px;
+    box-shadow: -5px 3px 15px 1px rgb(15, 15, 15),
+                inset -2px 0px 5px 3px rgb(76, 76, 76);
+}
+
+.lightsaber__part-2{
+    width: 70px;
+    height: 300px;
+    background: linear-gradient(to right, rgb(179, 179, 179) 50%, 
+                                          rgb(240, 240, 240), 
+                                          rgb(179, 179, 179));
+    border-radius: 8px 8px 5px 5px;
+    margin: 0 auto;
+    z-index: 1;
+    box-shadow: -5px 5px 15px 1px rgb(15, 15, 15),
+                inset 4px 0px 10px 3px gray;
+    margin-top: -5px;
+}
+
+.lightsaber__part-2__button{
+    position: absolute;
+    width: 10px;
+    height: 20px;
+    margin-left: 70px;
+    margin-top: 30px;
+    background-color: rgb(163, 2, 2);
+    background: linear-gradient(to left, rgb(194, 2, 2),  rgb(163, 2, 2));
+    border-radius: 2px 4px 4px 2px;
+
+    box-shadow: inset -4px 0px 10px 3px rgb(226, 37, 37);
+    cursor: pointer;
+}
+.off{
+    width: 10px;
+}
+
+.on{
+    width: 5px;
+}
+
+.lightsaber__part-3-wrapper{
+    width: 70px;
+    min-height: 10px;
+    margin: 0 auto;
+    margin-top: -40px;
+}
+
+.lightsaber__part-3{
+    width: 45px;
+    height: 40px;
+    background: linear-gradient(to right, rgb(179, 179, 179) 50%, 
+                                          rgb(201, 201, 201), 
+                                          rgb(179, 179, 179));
+    border-radius: 2px 80px 2px 2px;
+    z-index: 1;
+    box-shadow: -3px 2px 15px 1px rgb(15, 15, 15),
+                inset 1px 0px 10px 1px gray;
+}
+
+.lightsaber__part-4{
+    width: 55px;
+    height: 1300px;
+}
+
+.lightsaber_off{
+    width: 55px;
+    height: 1px;
+    margin: 0 auto;
+    z-index: 0;
+    transition: 1s all;
+}
+
+.lightsaber_on{
+    width: 55px;
+    height: 1300px;
+    margin: 0 auto;
+    z-index: 0;
+    border-radius: 40px 40px 5px 5px;
+    transition: 1s all;
+    animation-duration: 1s;
+    animation-name: lightsaber_light_red;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes lightsaber_light_red {
+    from {
+        background: linear-gradient(to right, rgb(251, 7, 7), 
+        rgb(255, 212, 212)50% 55%, 
+        rgb(251, 7, 7));
+
+        box-shadow: 0px -5px 40px 15px rgba(255, 2, 2, 0.878),
+        inset 0px 0px 35px 10px rgb(255, 36, 36);
+    }
+    to {
+        box-shadow: 0px -6px 35px 13px rgba(255, 2, 2, 0.878),
+        inset 0px 0px 25px 10px rgb(255, 36, 36);
+        background: linear-gradient(to right, rgb(251, 7, 7), 
+                                            rgb(254, 216, 216)49% 56%, 
+                                            rgb(251, 7, 7));
+    }
+  }
+
+  @keyframes lightsaber_light_blue {
+    from {
+        background: linear-gradient(to right, rgb(0, 33, 217), 
+        rgb(98, 218, 255)50% 55%, 
+        rgb(0, 33, 217));
+
+        box-shadow: 0px -5px 40px 15px rgba(2, 175, 255, 0.878),
+        inset 0px 0px 35px 10px rgb(0, 242, 254);
+    }
+    to {
+        box-shadow: 0px -6px 35px 13px rgba(2, 175, 255, 0.878),
+        inset 0px 0px 25px 10px rgb(0, 242, 254);
+        background: linear-gradient(to right, rgb(0, 33, 217), 
+        rgb(98, 218, 255)49% 56%, 
+        rgb(0, 33, 217));
+    }
+  }
+
+  @keyframes lightsaber_light_green {
+    from {
+        background: linear-gradient(to right, rgb(13, 198, 0), 
+        rgb(229, 255, 224)50% 55%, 
+        rgb(13, 198, 0));
+
+        box-shadow: 0px -5px 40px 15px rgba(23, 174, 0, 0.878),
+        inset 0px 0px 35px 10px rgb(126, 255, 124);
+    }
+    to {
+        box-shadow: 0px -6px 35px 13px rgba(23, 174, 0, 0.878),
+        inset 0px 0px 25px 10px rgb(126, 255, 124);
+        background: linear-gradient(to right, rgb(13, 198, 0), 
+        rgb(229, 255, 224)49% 56%, 
+        rgb(13, 198, 0));
+    }
+  }
